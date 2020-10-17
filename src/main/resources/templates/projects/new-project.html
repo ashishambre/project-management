@@ -14,7 +14,7 @@
             <option th:value="COMPLETED"> Completed</option>
         </select>
         <textarea type="text" placeholder="Enter Project Description" th:field="${project.description}"></textarea>
-        <select th:field="${project.employees}">
+        <select th:field="${project.employees}" multiple>
             <option th:each = "employee : ${employees}"
                     th:value = "${employee.employeeId}"
                     th:text = "${employee.firstName}">
